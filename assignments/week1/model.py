@@ -16,14 +16,21 @@ class LinearRegression:
 
     def fit(self, X: np.ndarray, y: np.ndarray) -> None:
         """fit function for the analytical solution"""
+
+        N, D = X.shape
+        ones_to_append = np.ones((N, 1))
+        X = np.hstack((ones_to_append, X))
+
         if np.linalg.det(X.T @ X) != 0:
-            self.w = np.linalg.inv(X.T @ X) @ X.T @ y
+            temp = np.linalg.inv(X.T @ X) @ X.T @ y
+            self.b = temp[0]
+            self.w = temp[1:]
         else:
             print("LinAlgError. Matrix is Singular. No analytical solution.")
 
     def predict(self, X: np.ndarray) -> np.ndarray:
         """predict function for the analytical solution"""
-        return X @ self.w
+        return X @ self.w + self.b
 
 
 class GradientDescentLinearRegression(LinearRegression):
