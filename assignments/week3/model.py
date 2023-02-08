@@ -8,7 +8,7 @@ class MLP(torch.nn.Module):
         input_size: int,
         hidden_size: int,
         num_classes: int,
-        hidden_count: int,
+        hidden_count: int = 1,
         activation: Callable = torch.nn.ReLU(),
         initializer: Callable = torch.nn.init.ones_,
     ) -> None:
