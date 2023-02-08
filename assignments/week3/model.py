@@ -3,9 +3,10 @@ from typing import Callable
 
 
 class MLP(torch.nn.Module):
-    '''
+    """
     class for multi-layer perceptron
-    '''
+    """
+
     def __init__(
         self,
         input_size: int,
