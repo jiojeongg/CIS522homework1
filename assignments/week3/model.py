@@ -28,7 +28,7 @@ class MLP(torch.nn.Module):
 
         self.fc1 = torch.nn.Linear(input_size, hidden_size)
         self.fc2 = torch.nn.Linear(hidden_size, num_classes)
-        #self.fc3 = torch.nn.Linear(hidden_size, num_classes)
+        # self.fc3 = torch.nn.Linear(hidden_size, num_classes)
 
     def forward(self, x):
         """
@@ -50,7 +50,7 @@ class MLP(torch.nn.Module):
 
         h_1 = self.activation(self.fc1(x))
 
-        #h_2 = self.activation(self.fc2(h_1))
+        # h_2 = self.activation(self.fc2(h_1))
 
         y_pred = self.activation(self.fc2(h_1))
 
