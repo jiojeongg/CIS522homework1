@@ -3,6 +3,9 @@ from typing import Callable
 
 
 class MLP(torch.nn.Module):
+    '''
+    class for multi-layer perceptron
+    '''
     def __init__(
         self,
         input_size: int,
@@ -30,7 +33,7 @@ class MLP(torch.nn.Module):
         self.fc2 = torch.nn.Linear(hidden_size, num_classes)
         # self.fc3 = torch.nn.Linear(hidden_size, num_classes)
 
-    def forward(self, x):
+    def forward(self, x: torch.Tensor) -> torch.Tensor:
         """
         Forward pass of the network.
 
