@@ -7,18 +7,17 @@ import math
 
 class CustomLRScheduler(_LRScheduler):
     def __init__(self, optimizer, T_max, last_epoch=-1, eta_min=0, verbose=False):
-        '''
+        """
         initialize scheduler
-        '''
+        """
         self.T_max = T_max
         self.eta_min = eta_min
         super(CustomLRScheduler, self).__init__(optimizer, last_epoch, verbose)
 
     def get_lr(self) -> List[float]:
-        '''
+        """
         cosine scheduler
-        '''
-
+        """
 
         if self.last_epoch == 0:
             return [group["lr"] for group in self.optimizer.param_groups]
