@@ -27,7 +27,7 @@ class CustomLRScheduler(_LRScheduler):
         """
         cosine scheduler
         """
-        if self._init == False:
+        if self._init is False:
             self._init = True
             return self.base_lrs
 
