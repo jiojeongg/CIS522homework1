@@ -6,6 +6,10 @@ import math
 
 
 class CustomLRScheduler(_LRScheduler):
+    """
+    class for the scheduler
+    """
+
     def __init__(self, optimizer, T_max, last_epoch=-1, eta_min=0, verbose=False):
         """
         initialize scheduler
