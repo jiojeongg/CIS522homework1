@@ -4,8 +4,6 @@ from torch.optim.lr_scheduler import _LRScheduler
 
 import math
 
-import numpy as np
-
 
 class CustomLRScheduler(_LRScheduler):
     def __init__(self, optimizer, T_max, last_epoch=-1, eta_min=0, verbose=False):
