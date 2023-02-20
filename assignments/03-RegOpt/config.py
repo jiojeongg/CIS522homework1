@@ -10,9 +10,9 @@ class CONFIG:
     class for configuration
     """
 
-    batch_size = 64
+    batch_size = 256
     num_epochs = 10
-    initial_learning_rate = 0.0015
+    initial_learning_rate = 0.002
     initial_weight_decay = 0
 
     lrs_kwargs = {
