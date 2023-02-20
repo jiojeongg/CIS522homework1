@@ -9,6 +9,8 @@
     "sources": [
         "Don't forget to list your sources/attribution here!",
         "Hainiu gave us Normalize(mean=[0.485, 0.456, 0.4], std=[0.229, 0.224, 0.2]) to try out",
-        "https://pytorch.org/docs/stable/_modules/torch/optim/lr_scheduler.html#CosineAnnealingLR"
+        "Hainiu recommended https://pytorch.org/docs/stable/_modules/torch/optim/lr_scheduler.html#CosineAnnealingLR",
+        "I looked at https://bo-10000.tistory.com/88 for the exact update rules (it's in Korean)",
+        "https://github.com/allenai/allennlp/issues/1642"
     ]
 }
