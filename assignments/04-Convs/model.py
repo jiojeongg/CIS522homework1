@@ -13,10 +13,10 @@ class Model(torch.nn.Module):
         initialization for the layers
         """
         super(Model, self).__init__()
-        self.conv1 = nn.Conv2d(num_channels, 6, 5)
+        self.conv1 = nn.Conv2d(num_channels, 10, 5)
         self.pool = nn.MaxPool2d(2, 2)
-        self.conv2 = nn.Conv2d(6, 16, 5)
-        self.fc1 = nn.Linear(16 * 5 * 5, 120)
+        self.conv2 = nn.Conv2d(10, 20, 5)
+        self.fc1 = nn.Linear(20 * 5 * 5, 120)
         self.fc2 = nn.Linear(120, num_classes)
         self.fc3 = nn.Linear(84, num_classes)
 
